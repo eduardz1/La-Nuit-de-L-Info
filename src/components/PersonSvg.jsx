@@ -1,5 +1,5 @@
-import Container from "react-bootstrap/Container";
 import PropTypes from "prop-types";
+import Container from "react-bootstrap/Container";
 
 const PersonSvg = ({
   firstQuestion,

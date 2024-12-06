@@ -1,12 +1,11 @@
 import { useContext, useState } from "react";
-import MessageContext from "./contexts/message/MessageContext";
 import Accordion from "react-bootstrap/Accordion";
-import Container from "react-bootstrap/Container";
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
 import Button from "react-bootstrap/Button";
-import Image from "react-bootstrap/Image";
+import Col from "react-bootstrap/Col";
+import Container from "react-bootstrap/Container";
 import Modal from "react-bootstrap/Modal";
+import Row from "react-bootstrap/Row";
+import MessageContext from "./contexts/message/MessageContext";
 import "./Fish.css";
 import PersonSvg from "./PersonSvg";
 import "./PersonSvg.css";
@@ -176,7 +175,7 @@ const Page = () => {
                         handleGeminiQuery(
                           promptAIstringPre +
                             "oil pollution" +
-                            promptAIstringPost
+                            promptAIstringPost,
                         )
                       }
                     >
@@ -257,7 +256,7 @@ const Page = () => {
                         handleGeminiQuery(
                           promptAIstringPre +
                             "plastic pollution" +
-                            promptAIstringPost
+                            promptAIstringPost,
                         )
                       }
                     >
@@ -336,7 +335,7 @@ const Page = () => {
                         handleGeminiQuery(
                           promptAIstringPre +
                             "coral extinction" +
-                            promptAIstringPost
+                            promptAIstringPost,
                         )
                       }
                     >
@@ -416,7 +415,7 @@ const Page = () => {
                         handleGeminiQuery(
                           promptAIstringPre +
                             "trawling industry and its link to overeating" +
-                            promptAIstringPost
+                            promptAIstringPost,
                         )
                       }
                     >
