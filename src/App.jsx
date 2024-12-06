@@ -20,8 +20,7 @@ const App = () => {
       >
         <MessageToast />
         <Routes>
-          <Route index element={<Page />}></Route>
-          <Route path="*" element={<ErrorPage />}></Route>
+          <Route path="*" element={<Page />}></Route>
         </Routes>
       </MessageContext.Provider>
     </ErrorBoundary>
