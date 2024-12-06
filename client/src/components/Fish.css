@@ -1,0 +1,203 @@
+.fish-container {
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none; /* lets clicks pass through */
+}
+
+.fish-group {
+  opacity: 1;
+  transition: all 2s ease-out;
+}
+
+.hide-fish {
+  opacity: 0;
+  transform: translateX(-100px);
+}
+
+.fish {
+  position: absolute;
+  font-size: 4rem;
+  animation: swim 15s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  opacity: 0;
+}
+
+.fishSmall {
+  position: absolute;
+  font-size: 2rem;
+  animation: swim 12s cubic-bezier(0.37, 0, 0.63, 1) infinite;
+  opacity: 0;
+}
+
+.fade-out {
+  opacity: 0;
+  animation: swimAway 2s forwards;
+}
+
+@keyframes swimAway {
+  0% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+}
+
+.fish1 {
+  top: 10%;
+  animation-delay: 0s;
+}
+
+.fish2 {
+  top: 20%;
+  animation-delay: -5s;
+}
+.fish3 {
+  top: 25%;
+  animation-delay: -6s;
+}
+.fish4 {
+  top: 30%;
+  animation-delay: -2s;
+}
+
+.fish5 {
+  top: 30%;
+  animation-delay: -10s;
+}
+
+@keyframes swim {
+  0% {
+    transform: translateX(500%) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+  25% {
+    transform: translateX(300%) translateY(-20px) rotate(-5deg);
+    opacity: 1;
+  }
+  50% {
+    transform: translateX(100%) translateY(0) rotate(0deg);
+  }
+  75% {
+    transform: translateX(-50%) translateY(20px) rotate(5deg);
+  }
+  100% {
+    transform: translateX(-100%) translateY(0) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.coral1 {
+  top: 42%;
+  left: 10%;
+}
+.coral2 {
+  top: 42%;
+  right: 15%;
+}
+.coral3 {
+  top: 42%;
+  left: 25%;
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: rotate(-5deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+}
+
+.coral.dead {
+  animation: coralDeath 2s forwards;
+  animation-timing-function: ease-out;
+}
+
+@keyframes coralDeath {
+  0% {
+    filter: grayscale(0%);
+    transform: rotate(0deg);
+  }
+  50% {
+    filter: grayscale(50%);
+    transform: rotate(0deg) translateY(5px);
+  }
+  100% {
+    filter: grayscale(100%);
+    opacity: 0.5;
+    transform: rotate(0deg) translateY(10px);
+  }
+}
+
+.coral {
+  position: absolute;
+  font-size: 3rem;
+  animation: sway 6s ease-in-out infinite;
+  transition: all 0.5s ease;
+}
+
+.debris1 {
+  animation: float1 15s infinite linear;
+  top: 20%;
+}
+.debris2 {
+  animation: float2 20s infinite linear;
+  top: 40%;
+}
+.debris3 {
+  animation: float1 18s infinite linear;
+  top: 60%;
+}
+.debris4 {
+  animation: float2 12s infinite linear;
+  top: 30%;
+}
+.debris5 {
+  animation: float1 25s infinite linear;
+  top: 70%;
+}
+
+@keyframes float1 {
+  0% {
+    transform: translateX(120%) rotate(0deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(-20%) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateX(-20%) rotate(360deg);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.7;
+  }
+  90% {
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateX(120%) rotate(0deg);
+    opacity: 0;
+  }
+}
+
+.debris {
+  animation-timing-function: ease-in-out;
+}
+
+.debrisSmall {
+  animation-timing-function: ease-in-out;
+}

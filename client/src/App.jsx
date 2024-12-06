@@ -4,7 +4,7 @@ import MessageToast from "./components/contexts/message/MessageToast";
 import useMessageContext from "./components/contexts/message/useMessageContext.mjs";
 import ErrorPage from "./components/errors/Error404Page";
 import ErrorBoundary from "./components/errors/ErrorBoundary";
-import Game from "./components/game/Game";
+import Page from "./components/Page";
 
 /**
  * Main component of the application that manages the routing and the state of the user.
@@ -20,7 +20,7 @@ const App = () => {
       >
         <MessageToast />
         <Routes>
-          <Route index element={<Game />}></Route>
+          <Route index element={<Page />}></Route>
           <Route path="*" element={<ErrorPage />}></Route>
         </Routes>
       </MessageContext.Provider>
