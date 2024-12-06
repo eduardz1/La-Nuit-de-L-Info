@@ -11,6 +11,7 @@ import PersonSvg from "./PersonSvg";
 import "./PersonSvg.css";
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
+import YouTube from "react-youtube";
 
 const genAI = new GoogleGenerativeAI("AIzaSyAxWPFgh2HTaNYibCDmzg352vVXR7HEZfg");
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
@@ -175,7 +176,7 @@ const Page = () => {
                         handleGeminiQuery(
                           promptAIstringPre +
                             "oil pollution" +
-                            promptAIstringPost,
+                            promptAIstringPost
                         )
                       }
                     >
@@ -256,7 +257,7 @@ const Page = () => {
                         handleGeminiQuery(
                           promptAIstringPre +
                             "plastic pollution" +
-                            promptAIstringPost,
+                            promptAIstringPost
                         )
                       }
                     >
@@ -335,7 +336,7 @@ const Page = () => {
                         handleGeminiQuery(
                           promptAIstringPre +
                             "coral extinction" +
-                            promptAIstringPost,
+                            promptAIstringPost
                         )
                       }
                     >
@@ -415,7 +416,7 @@ const Page = () => {
                         handleGeminiQuery(
                           promptAIstringPre +
                             "trawling industry and its link to overeating" +
-                            promptAIstringPost,
+                            promptAIstringPost
                         )
                       }
                     >
@@ -437,6 +438,62 @@ const Page = () => {
                     </Modal>
                   </div>
                 )}
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="4">
+              <Accordion.Header>🎤 Podcast - Florian Sevelec</Accordion.Header>
+              <Accordion.Body>
+                <div
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    paddingBottom: "56.25%" /* 16:9 Aspect Ratio */,
+                  }}
+                >
+                  <YouTube
+                    videoId="4HyfVCl3UZE"
+                    opts={{
+                      width: "100%",
+                      height: "360",
+                    }}
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  />
+                </div>
+              </Accordion.Body>
+            </Accordion.Item>
+            <Accordion.Item eventKey="4">
+              <Accordion.Header>
+                🎤 Podcast - Frederic Le Moigne
+              </Accordion.Header>
+              <Accordion.Body>
+                <div
+                  style={{
+                    position: "relative",
+                    width: "100%",
+                    paddingBottom: "56.25%" /* 16:9 Aspect Ratio */,
+                  }}
+                >
+                  <YouTube
+                    videoId="0aCXThozdeQ"
+                    opts={{
+                      width: "100%",
+                      height: "360",
+                    }}
+                    style={{
+                      position: "absolute",
+                      top: 0,
+                      left: 0,
+                      width: "100%",
+                      height: "100%",
+                    }}
+                  />
+                </div>
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
